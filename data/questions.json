@@ -1,0 +1,57 @@
+[
+  {
+    "question": "How are production deployments performed?",
+    "expected_sources": ["deployment.md"],
+    "expected_answer": "Deployments are performed through the CI/CD pipeline."
+  },
+  {
+    "question": "What must be checked before a deployment?",
+    "expected_sources": ["deployment.md"],
+    "expected_answer": "All automated tests must pass on the main branch."
+  },
+  {
+    "question": "How can an engineer roll back a deployment?",
+    "expected_sources": ["deployment.md"],
+    "expected_answer": "The on-call engineer can roll back to the previous stable version using the deployment dashboard."
+  },
+  {
+    "question": "Who approves production database access?",
+    "expected_sources": ["access-policy.md"],
+    "expected_answer": "The engineering manager must approve the request."
+  },
+  {
+    "question": "What information must a database access request include?",
+    "expected_sources": ["access-policy.md"],
+    "expected_answer": "The business justification and the required access duration."
+  },
+  {
+    "question": "Can production credentials be committed to source control?",
+    "expected_sources": ["access-policy.md"],
+    "expected_answer": "No. Production database credentials must never be committed to source control."
+  },
+  {
+    "question": "How long are application logs retained?",
+    "expected_sources": ["logging-policy.md"],
+    "expected_answer": "30 days."
+  },
+  {
+    "question": "How long are security audit logs retained?",
+    "expected_sources": ["logging-policy.md"],
+    "expected_answer": "180 days."
+  },
+  {
+    "question": "What sensitive information must not appear in logs?",
+    "expected_sources": ["logging-policy.md"],
+    "expected_answer": "Passwords, API keys, and authentication tokens."
+  },
+  {
+    "question": "What is Acme's remote work policy?",
+    "expected_sources": [],
+    "expected_answer": null
+  },
+  {
+    "question": "After a deployment incident, how long should application logs be retained, and how can the service be rolled back?",
+    "expected_sources": ["deployment.md", "logging-policy.md"],
+    "expected_answer": "Application logs are retained for 30 days. The on-call engineer can roll back to the previous stable version using the deployment dashboard."
+  }
+]
