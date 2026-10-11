@@ -34,8 +34,6 @@ def split_into_chunks(
         end = start + chunk_size
         chunk = text[start:end].strip()
 
-        print(chunk)
-
         if chunk:
             chunks.append(chunk)
 

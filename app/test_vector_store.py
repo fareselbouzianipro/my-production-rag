@@ -1,4 +1,9 @@
-from app.vector_store import COLLECTION_NAME, create_vector_store, index_documents
+from app.vector_store import (
+    COLLECTION_NAME,
+    create_vector_store,
+    index_documents,
+    search_documents,
+)
 
 
 def test_create_vector_store():
@@ -23,8 +28,6 @@ def test_index_documents():
         limit=1,
     )
 
-    print(result)
-
     # The collection should contain the indexed chunks.
     assert (
         client.count(
@@ -33,3 +36,19 @@ def test_index_documents():
         ).count
         == indexed_count
     )
+
+
+def test_search_documents_finds_relevant_source():
+    client = create_vector_store()
+    index_documents(client)
+
+    results = search_documents(
+        client,
+        "How can I undo a production release?",
+        limit=3,
+    )
+
+    assert results
+    assert results[0]["source"] == "deployment.md"
+    assert results[0]["content"]
+    assert isinstance(results[0]["score"], float)

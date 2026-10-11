@@ -1,7 +1,7 @@
 from qdrant_client import QdrantClient, models
 
 from app.embeddings import create_embedding_model, embed_texts
-from app.ingestion import ingest_documents
+from app.ingestion import ingest_documents, split_into_chunks
 
 COLLECTION_NAME = "acme_docs"
 VECTOR_SIZE = 384
@@ -49,3 +49,31 @@ def index_documents(client: QdrantClient) -> int:
 
     client.upsert(collection_name=COLLECTION_NAME, points=points, wait=True)
     return len(points)
+
+
+def search_documents(client: QdrantClient, query: str, limit: int = 3) -> list[dict]:
+    """Return the most semantically relevant document chunks."""
+    if not query.strip():
+        raise ValueError("Query must not be empty")
+    if limit <= 0:
+        raise ValueError("Limit must be positive")
+
+    model = create_embedding_model()
+    query_vector = embed_texts(model, [query])[0]
+
+    response = client.query_points(
+        collection_name=COLLECTION_NAME,
+        query=query_vector,
+        limit=limit,
+        with_payload=True,
+    )
+
+    return [
+        {
+            "score": point.score,
+            "source": point.payload["source"],
+            "chunk_id": point.payload["chunk_id"],
+            "content": point.payload["content"],
+        }
+        for point in response.points
+    ]
