@@ -46,7 +46,6 @@ def index_documents(client: QdrantClient) -> int:
         )
         for index, (chunk, vector) in enumerate(zip(chunks, vectors))
     ]
-
     client.upsert(collection_name=COLLECTION_NAME, points=points, wait=True)
     return len(points)
 

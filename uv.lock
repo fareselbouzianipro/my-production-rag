@@ -815,6 +815,7 @@ source = { editable = "." }
 dependencies = [
     { name = "fastapi" },
     { name = "fastembed" },
+    { name = "httpx" },
     { name = "pydantic-settings" },
     { name = "qdrant-client" },
     { name = "uvicorn" },
@@ -830,6 +831,7 @@ dev = [
 requires-dist = [
     { name = "fastapi", specifier = ">=0.142.4" },
     { name = "fastembed", specifier = ">=0.9.0" },
+    { name = "httpx", specifier = ">=0.28.1" },
     { name = "pydantic-settings", specifier = ">=2.15.0" },
     { name = "qdrant-client", specifier = ">=1.19.1" },
     { name = "uvicorn", specifier = ">=0.54.0" },
