@@ -1,9 +1,9 @@
-from app.vector_store import create_vector_store, index_documents, search_documents
+from app.vector_store import create_vector_store, search_documents, store_documents
 
 
 def main() -> None:
     client = create_vector_store()
-    indexed_count = index_documents(client)
+    indexed_count = store_documents(client)
     print(f"Indexed {indexed_count} chunks.")
 
     query = "How can I undo a production release?"

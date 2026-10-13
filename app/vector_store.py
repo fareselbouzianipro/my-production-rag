@@ -1,7 +1,7 @@
 from qdrant_client import QdrantClient, models
 
 from app.embeddings import create_embedding_model, embed_texts
-from app.ingestion import ingest_documents, split_into_chunks
+from app.ingestion import ingest_documents
 
 COLLECTION_NAME = "acme_docs"
 VECTOR_SIZE = 384
@@ -24,7 +24,7 @@ def create_vector_store() -> QdrantClient:
     return client
 
 
-def index_documents(client: QdrantClient) -> int:
+def store_documents(client: QdrantClient) -> int:
     """Embed document chunks and store them in Qdrant."""
     chunks = ingest_documents()
 

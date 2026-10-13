@@ -1,8 +1,8 @@
 from app.vector_store import (
     COLLECTION_NAME,
     create_vector_store,
-    index_documents,
     search_documents,
+    store_documents,
 )
 
 
@@ -18,7 +18,7 @@ def test_create_vector_store():
 def test_index_documents():
     client = create_vector_store()
 
-    indexed_count = index_documents(client)
+    indexed_count = store_documents(client)
 
     assert indexed_count > 0
 
@@ -40,7 +40,7 @@ def test_index_documents():
 
 def test_search_documents_finds_relevant_source():
     client = create_vector_store()
-    index_documents(client)
+    store_documents(client)
 
     results = search_documents(
         client,
