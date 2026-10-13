@@ -1,4 +1,4 @@
-from app.generation import generate_answer
+from production_rag.generation import generate_answer
 
 
 def test_generate_answer_returns_response():

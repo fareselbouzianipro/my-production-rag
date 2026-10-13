@@ -1,13 +1,11 @@
-from pathlib import Path
-
-DATA_DIR = Path("data/raw")
+from production_rag.config import settings
 
 
 def load_documents() -> list[dict[str, str]]:
     """Load Markdown documents from the raw data directory."""
     documents = []
 
-    for file_path in sorted(DATA_DIR.glob("*.md")):
+    for file_path in sorted(settings.data_dir.glob("*.md")):
         content = file_path.read_text(encoding="utf-8")
 
         documents.append({"source": file_path.name, "content": content})

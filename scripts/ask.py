@@ -1,4 +1,4 @@
-from app.rag import answer_question
+from production_rag.rag import answer_question
 
 
 def main() -> None:

@@ -1,4 +1,4 @@
-from app.embeddings import create_embedding_model, embed_texts
+from production_rag.embeddings import create_embedding_model, embed_texts
 
 
 def test_embed_texts_returns_384_dimensional_vectors():

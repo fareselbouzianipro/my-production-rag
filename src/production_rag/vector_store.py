@@ -1,22 +1,20 @@
 from qdrant_client import QdrantClient, models
 
-from app.embeddings import create_embedding_model, embed_texts
-from app.ingestion import ingest_documents
-
-COLLECTION_NAME = "acme_docs"
-VECTOR_SIZE = 384
+from production_rag.config import settings
+from production_rag.embeddings import create_embedding_model, embed_texts
+from production_rag.ingestion import ingest_documents
 
 
 def create_vector_store() -> QdrantClient:
     """Connect to Qdrant and create the collection if needed."""
 
-    client = QdrantClient(url="http://localhost:6333")
+    client = QdrantClient(url=settings.qdrant_url)
 
-    if not client.collection_exists(COLLECTION_NAME):
+    if not client.collection_exists(settings.collection_name):
         client.create_collection(
-            collection_name=COLLECTION_NAME,
+            collection_name=settings.collection_name,
             vectors_config=models.VectorParams(
-                size=VECTOR_SIZE,
+                size=settings.vector_size,
                 distance=models.Distance.COSINE,
             ),
         )
@@ -46,7 +44,7 @@ def store_documents(client: QdrantClient) -> int:
         )
         for index, (chunk, vector) in enumerate(zip(chunks, vectors))
     ]
-    client.upsert(collection_name=COLLECTION_NAME, points=points, wait=True)
+    client.upsert(collection_name=settings.collection_name, points=points, wait=True)
     return len(points)
 
 
@@ -61,7 +59,7 @@ def search_documents(client: QdrantClient, query: str, limit: int = 3) -> list[d
     query_vector = embed_texts(model, [query])[0]
 
     response = client.query_points(
-        collection_name=COLLECTION_NAME,
+        collection_name=settings.collection_name,
         query=query_vector,
         limit=limit,
         with_payload=True,

@@ -1,5 +1,5 @@
-from app.vector_store import (
-    COLLECTION_NAME,
+from production_rag.config import settings
+from production_rag.vector_store import (
     create_vector_store,
     search_documents,
     store_documents,
@@ -9,9 +9,9 @@ from app.vector_store import (
 def test_create_vector_store():
     client = create_vector_store()
 
-    assert client.collection_exists(COLLECTION_NAME)
+    assert client.collection_exists(settings.collection_name)
 
-    info = client.get_collection(COLLECTION_NAME)
+    info = client.get_collection(settings.collection_name)
     assert info.config.params.vectors.size == 384
 
 
@@ -23,7 +23,7 @@ def test_index_documents():
     assert indexed_count > 0
 
     result = client.query_points(
-        collection_name=COLLECTION_NAME,
+        collection_name=settings.collection_name,
         query=[0.0] * 384,
         limit=1,
     )
@@ -31,7 +31,7 @@ def test_index_documents():
     # The collection should contain the indexed chunks.
     assert (
         client.count(
-            collection_name=COLLECTION_NAME,
+            collection_name=settings.collection_name,
             exact=True,
         ).count
         == indexed_count

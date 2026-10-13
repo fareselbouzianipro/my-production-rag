@@ -1,6 +1,6 @@
 import pytest
 
-from app.ingestion import ingest_documents, load_documents, split_into_chunks
+from production_rag.ingestion import ingest_documents, load_documents, split_into_chunks
 
 
 def test_load_documents():

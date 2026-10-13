@@ -1,5 +1,5 @@
-from app.generation import generate_answer
-from app.vector_store import create_vector_store, search_documents
+from production_rag.generation import generate_answer
+from production_rag.vector_store import create_vector_store, search_documents
 
 
 def answer_question(question: str, limit: int = 3) -> dict:

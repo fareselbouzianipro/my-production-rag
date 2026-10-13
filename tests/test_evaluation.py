@@ -1,6 +1,6 @@
 import pytest
 
-from app.evaluation import recall_at_k, reciprocal_rank_at_k
+from production_rag.evaluation import recall_at_k, reciprocal_rank_at_k
 
 
 def test_recall_at_k_counts_unique_expected_sources():

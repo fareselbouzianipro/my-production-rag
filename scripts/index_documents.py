@@ -1,4 +1,8 @@
-from app.vector_store import create_vector_store, search_documents, store_documents
+from production_rag.vector_store import (
+    create_vector_store,
+    search_documents,
+    store_documents,
+)
 
 
 def main() -> None:

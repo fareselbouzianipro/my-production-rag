@@ -1,4 +1,4 @@
-from app.embeddings import (
+from production_rag.embeddings import (
     cosine_similarity,
     create_embedding_model,
     embed_texts,

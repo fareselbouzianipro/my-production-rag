@@ -1,7 +1,6 @@
 import httpx
 
-OLLAMA_URL = "http://localhost:11434"
-MODEL_NAME = "qwen2.5:3b"
+from production_rag.config import settings
 
 
 def generate_answer(question: str, context_chunks: list[dict]) -> str:
@@ -30,9 +29,9 @@ Question: {question}
 Answer:"""
 
     response = httpx.post(
-        f"{OLLAMA_URL}/api/generate",
+        f"{settings.ollama_url}/api/generate",
         json={
-            "model": MODEL_NAME,
+            "model": settings.llm_model,
             "prompt": prompt,
             "stream": False,
         },

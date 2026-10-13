@@ -1,11 +1,11 @@
 from fastembed import TextEmbedding
 
-MODEL_NAME = "BAAI/bge-small-en-v1.5"
+from production_rag.config import settings
 
 
 def create_embedding_model() -> TextEmbedding:
     """Initialize the local embedding model."""
-    return TextEmbedding(model_name=MODEL_NAME)
+    return TextEmbedding(model_name=settings.embedding_model)
 
 
 def embed_texts(
