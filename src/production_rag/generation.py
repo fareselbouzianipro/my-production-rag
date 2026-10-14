@@ -34,6 +34,7 @@ Answer:"""
             "model": settings.llm_model,
             "prompt": prompt,
             "stream": False,
+            "options": {"temperature": 0, "seed": 42},
         },
         timeout=120.0,
     )

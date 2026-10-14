@@ -1,3 +1,4 @@
+from production_rag.embeddings import create_embedding_model
 from production_rag.vector_store import (
     create_vector_store,
     search_documents,
@@ -7,11 +8,12 @@ from production_rag.vector_store import (
 
 def main() -> None:
     client = create_vector_store()
-    indexed_count = store_documents(client)
+    model = create_embedding_model()
+    indexed_count = store_documents(client, model)
     print(f"Indexed {indexed_count} chunks.")
 
     query = "How can I undo a production release?"
-    results = search_documents(client, query, limit=3)
+    results = search_documents(client, query, model, limit=3)
 
     print(f"\nQuery: {query}\n")
 

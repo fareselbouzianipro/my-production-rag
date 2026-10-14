@@ -1,7 +1,7 @@
 # Production RAG
 
-Production-oriented RAG system with hybrid retrieval,
-reranking, grounded generation and citation verification.
+Evaluation-driven RAG system: every improvement to the pipeline
+(chunking, hybrid retrieval, reranking…) is measured before being kept.
 
 ## Goal
 
@@ -19,15 +19,9 @@ Build a production-grade RAG system over internal company documentation.
 
 ## Roadmap
 
-- [ ] Document ingestion
-- [ ] Chunking
-- [ ] Dense retrieval
-- [ ] BM25 retrieval
-- [ ] Hybrid retrieval
-- [ ] Reranking
-- [ ] Generation
-- [ ] Citation verification
-- [ ] Evaluation
-- [ ] API
-- [ ] Docker
-- [ ] Observability
+- [ ] **Phase 1 — Foundations**: ingestion, dense retrieval, grounded generation, first metrics *(in progress: real corpus + eval set)*
+- [ ] **Phase 2 — Evaluation harness**: reproducible experiments, retrieval & generation metrics
+- [ ] **Phase 3 — Measured improvements**: chunking, hybrid search, reranking, query rewriting
+- [ ] **Phase 4 — Production readiness**: API, Docker, CI, observability, demo
+
+See [docs/ROADMAP.md](docs/ROADMAP.md) for details and experiment results.

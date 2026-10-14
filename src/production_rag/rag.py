@@ -1,3 +1,4 @@
+from production_rag.embeddings import create_embedding_model
 from production_rag.generation import generate_answer
 from production_rag.vector_store import create_vector_store, search_documents
 
@@ -9,9 +10,11 @@ def answer_question(question: str, limit: int = 3) -> dict:
         raise ValueError("Question must not be empty")
 
     client = create_vector_store()
+    model = create_embedding_model()
     chunks = search_documents(
         client,
         question,
+        model,
         limit,
     )
 

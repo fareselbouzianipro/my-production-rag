@@ -1,4 +1,5 @@
 from production_rag.config import settings
+from production_rag.embeddings import create_embedding_model
 from production_rag.vector_store import (
     create_vector_store,
     search_documents,
@@ -18,7 +19,8 @@ def test_create_vector_store():
 def test_index_documents():
     client = create_vector_store()
 
-    indexed_count = store_documents(client)
+    model = create_embedding_model()
+    indexed_count = store_documents(client, model)
 
     assert indexed_count > 0
 
@@ -40,11 +42,13 @@ def test_index_documents():
 
 def test_search_documents_finds_relevant_source():
     client = create_vector_store()
-    store_documents(client)
+    model = create_embedding_model()
+    store_documents(client, model)
 
     results = search_documents(
         client,
         "How can I undo a production release?",
+        model,
         limit=3,
     )
 

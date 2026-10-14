@@ -1,7 +1,8 @@
+from fastembed import TextEmbedding
 from qdrant_client import QdrantClient, models
 
 from production_rag.config import settings
-from production_rag.embeddings import create_embedding_model, embed_texts
+from production_rag.embeddings import embed_texts
 from production_rag.ingestion import ingest_documents
 
 
@@ -22,14 +23,13 @@ def create_vector_store() -> QdrantClient:
     return client
 
 
-def store_documents(client: QdrantClient) -> int:
+def store_documents(client: QdrantClient, model: TextEmbedding) -> int:
     """Embed document chunks and store them in Qdrant."""
     chunks = ingest_documents()
 
     if not chunks:
         return 0
 
-    model = create_embedding_model()
     vectors = embed_texts(model, [chunk["content"] for chunk in chunks])
 
     points = [
@@ -48,14 +48,15 @@ def store_documents(client: QdrantClient) -> int:
     return len(points)
 
 
-def search_documents(client: QdrantClient, query: str, limit: int = 3) -> list[dict]:
+def search_documents(
+    client: QdrantClient, query: str, model: TextEmbedding, limit: int = 3
+) -> list[dict]:
     """Return the most semantically relevant document chunks."""
     if not query.strip():
         raise ValueError("Query must not be empty")
     if limit <= 0:
         raise ValueError("Limit must be positive")
 
-    model = create_embedding_model()
     query_vector = embed_texts(model, [query])[0]
 
     response = client.query_points(
