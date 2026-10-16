@@ -11,3 +11,6 @@ wheels/
 
 # Environment
 .env
+
+# Downloaded corpus (see data/sources.toml)
+data/corpus/

@@ -1,0 +1,27 @@
+# Corpus manifest: the documents downloaded by scripts/download_corpus.py.
+# Files are saved to data/corpus/<id>.pdf and are not committed to Git.
+# `sha256` pins the exact file content, so the corpus is reproducible.
+
+[[documents]]
+id = "ifab-laws-of-the-game"
+title = "Laws of the Game"
+publisher = "IFAB"
+edition = "2026/27"
+url = "https://downloads.theifab.com/downloads/laws-of-the-game-202627-single-pages?l=en"
+sha256 = "89398520b353c6d995a1bb2557c97dc3c5aa1712c1d3009589f580a5a23c6a7d"
+
+[[documents]]
+id = "fifa-status-transfer-players"
+title = "Regulations on the Status and Transfer of Players"
+publisher = "FIFA"
+edition = "January 2026"
+url = "https://digitalhub.fifa.com/m/696d877ea35ca761/original/Regulations-on-the-Status-and-Transfer-of-Players-January-2026-edition.pdf"
+sha256 = "ecf0928a410eabfe15c085f2528067320d53f2cf76f87bc5c6a60cd2f0de29fd"
+
+[[documents]]
+id = "fifa-disciplinary-code"
+title = "FIFA Disciplinary Code"
+publisher = "FIFA"
+edition = "September 2025"
+url = "https://digitalhub.fifa.com/m/6094262690de769/original/FIFA-Disciplinary-Code-2025.pdf"
+sha256 = "ff271aee9ec5eb1bfe79203a660b02eea66447a0fd93a12bd59786d8b542e174"
