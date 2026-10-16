@@ -9,6 +9,7 @@ dependencies = [
     "fastembed>=0.9.0",
     "httpx>=0.28.1",
     "pydantic-settings>=2.15.0",
+    "pymupdf>=1.28.2",
     "qdrant-client>=1.19.1",
     "uvicorn>=0.54.0",
 ]
@@ -25,3 +26,7 @@ dev = [
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
+filterwarnings = [
+    # Emitted by pymupdf's compiled bindings, not by our code.
+    "ignore:builtin type .* has no __module__ attribute:DeprecationWarning",
+]
