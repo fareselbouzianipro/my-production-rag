@@ -5,13 +5,16 @@ from production_rag.generation import generate_answer
 
 CHUNKS = [
     {
-        "source": "deployment.md",
+        "source": "ifab-laws-of-the-game",
+        "page": 111,
+        "section": "Law 11 – Offside > 3. No offence",
         "content": (
-            "The on-call engineer can roll back to the "
-            "previous stable version using the deployment dashboard."
+            "There is no offside offence if a player receives the ball "
+            "directly from a goal kick, a throw-in or a corner kick."
         ),
     }
 ]
+QUESTION = "Can a player be offside from a throw-in?"
 
 
 class FakeResponse:
@@ -21,7 +24,7 @@ class FakeResponse:
         pass
 
     def json(self) -> dict:
-        return {"response": "  Use the deployment dashboard [deployment.md]  "}
+        return {"response": "  No [ifab-laws-of-the-game, p. 111]  "}
 
 
 def test_generate_answer_sends_context_and_question(monkeypatch):
@@ -33,11 +36,12 @@ def test_generate_answer_sends_context_and_question(monkeypatch):
 
     monkeypatch.setattr(generation.httpx, "post", fake_post)
 
-    answer = generate_answer("How can an engineer roll back a deployment?", CHUNKS)
+    answer = generate_answer(QUESTION, CHUNKS)
 
-    assert answer == "Use the deployment dashboard [deployment.md]"
-    assert "Source: deployment.md" in captured["prompt"]
-    assert "How can an engineer roll back a deployment?" in captured["prompt"]
+    assert answer == "No [ifab-laws-of-the-game, p. 111]"
+    assert "[ifab-laws-of-the-game, p. 111]" in captured["prompt"]
+    assert "Law 11 – Offside > 3. No offence" in captured["prompt"]
+    assert QUESTION in captured["prompt"]
 
 
 def test_generate_answer_without_context_does_not_call_llm(monkeypatch):
@@ -46,7 +50,7 @@ def test_generate_answer_without_context_does_not_call_llm(monkeypatch):
 
     monkeypatch.setattr(generation.httpx, "post", fail_post)
 
-    answer = generate_answer("How can an engineer roll back a deployment?", [])
+    answer = generate_answer(QUESTION, [])
 
     assert "don't know" in answer
 

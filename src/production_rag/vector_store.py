@@ -3,7 +3,16 @@ from qdrant_client import QdrantClient, models
 
 from production_rag.config import settings
 from production_rag.embeddings import embed_texts
-from production_rag.ingestion import ingest_documents
+
+
+def create_collection(client: QdrantClient) -> None:
+    client.create_collection(
+        collection_name=settings.collection_name,
+        vectors_config=models.VectorParams(
+            size=settings.vector_size,
+            distance=models.Distance.COSINE,
+        ),
+    )
 
 
 def create_vector_store() -> QdrantClient:
@@ -12,20 +21,21 @@ def create_vector_store() -> QdrantClient:
     client = QdrantClient(url=settings.qdrant_url)
 
     if not client.collection_exists(settings.collection_name):
-        client.create_collection(
-            collection_name=settings.collection_name,
-            vectors_config=models.VectorParams(
-                size=settings.vector_size,
-                distance=models.Distance.COSINE,
-            ),
-        )
+        create_collection(client)
 
     return client
 
 
-def store_documents(client: QdrantClient, model: TextEmbedding) -> int:
-    """Embed document chunks and store them in Qdrant."""
-    chunks = ingest_documents()
+def store_documents(
+    client: QdrantClient, model: TextEmbedding, chunks: list[dict]
+) -> int:
+    """Embed chunks and replace the collection content with them.
+
+    The collection is recreated so chunks from a previous indexing run
+    (e.g. with another chunk size) never mix with the new ones.
+    """
+    client.delete_collection(settings.collection_name)
+    create_collection(client)
 
     if not chunks:
         return 0
@@ -33,15 +43,7 @@ def store_documents(client: QdrantClient, model: TextEmbedding) -> int:
     vectors = embed_texts(model, [chunk["content"] for chunk in chunks])
 
     points = [
-        models.PointStruct(
-            id=index,
-            vector=vector,
-            payload={
-                "chunk_id": chunk["chunk_id"],
-                "source": chunk["source"],
-                "content": chunk["content"],
-            },
-        )
+        models.PointStruct(id=index, vector=vector, payload=chunk)
         for index, (chunk, vector) in enumerate(zip(chunks, vectors))
     ]
     client.upsert(collection_name=settings.collection_name, points=points, wait=True)
@@ -66,12 +68,4 @@ def search_documents(
         with_payload=True,
     )
 
-    return [
-        {
-            "score": point.score,
-            "source": point.payload["source"],
-            "chunk_id": point.payload["chunk_id"],
-            "content": point.payload["content"],
-        }
-        for point in response.points
-    ]
+    return [{"score": point.score, **point.payload} for point in response.points]

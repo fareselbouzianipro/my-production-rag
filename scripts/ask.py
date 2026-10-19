@@ -2,7 +2,7 @@ from production_rag.rag import answer_question
 
 
 def main() -> None:
-    question = input("Ask Acme documentation: ")
+    question = input("Ask about football regulations: ")
 
     result = answer_question(question)
 

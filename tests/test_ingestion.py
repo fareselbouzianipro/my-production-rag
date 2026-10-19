@@ -1,21 +1,21 @@
 import pytest
 
-from production_rag.ingestion import ingest_documents, load_documents, split_into_chunks
+from production_rag.ingestion import chunk_passages, split_into_chunks
 
-
-def test_load_documents():
-    documents = load_documents()
-
-    assert len(documents) == 3
-    sources = {document["source"] for document in documents}
-    assert sources == {
-        "access-policy.md",
-        "deployment.md",
-        "logging-policy.md",
-    }
-
-    empty = [d["source"] for d in documents if not d["content"].strip()]
-    assert not empty, f"Empty documents: {empty}"
+PASSAGES = [
+    {
+        "source": "fifa-disciplinary-code",
+        "page": 21,
+        "section": "20. MANIPULATION OF FOOTBALL MATCHES AND COMPETITIONS",
+        "text": "a" * 30,
+    },
+    {
+        "source": "fifa-disciplinary-code",
+        "page": 22,
+        "section": "21. RACISM",
+        "text": "b" * 10,
+    },
+]
 
 
 def test_split_into_chunks_preserves_all_text():
@@ -37,20 +37,21 @@ def test_split_into_chunks_rejects_invalid_parameters():
         split_into_chunks("hello", chunk_size=10, overlap=10)
 
 
-def test_ingest_documents_returns_source_aware_chunks():
-    chunks = ingest_documents()
+def test_chunk_passages_keeps_page_and_section():
+    chunks = chunk_passages(PASSAGES, chunk_size=20, overlap=5)
 
-    assert chunks
-    assert all(chunk["chunk_id"] for chunk in chunks)
-    assert all(chunk["source"] for chunk in chunks)
-    assert all(chunk["content"].strip() for chunk in chunks)
+    assert [(chunk["page"], chunk["section"]) for chunk in chunks] == [
+        (21, "20. MANIPULATION OF FOOTBALL MATCHES AND COMPETITIONS"),
+        (21, "20. MANIPULATION OF FOOTBALL MATCHES AND COMPETITIONS"),
+        (22, "21. RACISM"),
+    ]
 
-    sources = {chunk["source"] for chunk in chunks}
 
-    assert sources == {
-        "access-policy.md",
-        "deployment.md",
-        "logging-policy.md",
-    }
+def test_chunk_passages_creates_unique_ids_per_source():
+    chunks = chunk_passages(PASSAGES, chunk_size=20, overlap=5)
 
-    assert len({chunk["chunk_id"] for chunk in chunks}) == len(chunks)
+    assert [chunk["chunk_id"] for chunk in chunks] == [
+        "fifa-disciplinary-code:0",
+        "fifa-disciplinary-code:1",
+        "fifa-disciplinary-code:2",
+    ]

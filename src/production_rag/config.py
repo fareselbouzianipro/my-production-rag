@@ -8,13 +8,16 @@ class Settings(BaseSettings):
 
     model_config = SettingsConfigDict(env_file=".env", extra="ignore")
 
-    data_dir: Path = Path("data/raw")
+    corpus_dir: Path = Path("data/corpus")
+
+    chunk_size: int = 500
+    chunk_overlap: int = 50
 
     embedding_model: str = "BAAI/bge-small-en-v1.5"
     vector_size: int = 384
 
     qdrant_url: str = "http://localhost:6333"
-    collection_name: str = "acme_docs"
+    collection_name: str = "football_regulations"
 
     ollama_url: str = "http://localhost:11434"
     llm_model: str = "qwen2.5:3b"

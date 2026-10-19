@@ -1,16 +1,18 @@
+from pathlib import Path
+
 from production_rag.config import settings
+from production_rag.pdf_extraction import extract_passages
 
 
-def load_documents() -> list[dict[str, str]]:
-    """Load Markdown documents from the raw data directory."""
-    documents = []
+def load_passages(corpus_dir: Path | None = None) -> list[dict]:
+    """Extract section-labelled passages from every PDF of the corpus."""
+    corpus_dir = corpus_dir or settings.corpus_dir
+    passages = []
 
-    for file_path in sorted(settings.data_dir.glob("*.md")):
-        content = file_path.read_text(encoding="utf-8")
+    for path in sorted(corpus_dir.glob("*.pdf")):
+        passages.extend(extract_passages(path))
 
-        documents.append({"source": file_path.name, "content": content})
-
-    return documents
+    return passages
 
 
 def split_into_chunks(
@@ -42,21 +44,39 @@ def split_into_chunks(
     return chunks
 
 
-def ingest_documents() -> list[dict[str, str]]:
-    """Load documents and convert them into source-aware chunks."""
-    documents = load_documents()
+def chunk_passages(
+    passages: list[dict],
+    chunk_size: int = 500,
+    overlap: int = 50,
+) -> list[dict]:
+    """Split passages into chunks that keep their source, page and section."""
     chunks = []
+    chunk_counts: dict[str, int] = {}
 
-    for document in documents:
-        document_chunks = split_into_chunks(document["content"])
+    for passage in passages:
+        source = passage["source"]
 
-        for index, chunk_text in enumerate(document_chunks):
+        for text in split_into_chunks(passage["text"], chunk_size, overlap):
+            index = chunk_counts.get(source, 0)
+            chunk_counts[source] = index + 1
+
             chunks.append(
                 {
-                    "chunk_id": f"{document['source']}:{index}",
-                    "source": document["source"],
-                    "content": chunk_text,
+                    "chunk_id": f"{source}:{index}",
+                    "source": source,
+                    "page": passage["page"],
+                    "section": passage["section"],
+                    "content": text,
                 }
             )
 
     return chunks
+
+
+def ingest_documents(corpus_dir: Path | None = None) -> list[dict]:
+    """Load the corpus and convert it into source-aware chunks."""
+    return chunk_passages(
+        load_passages(corpus_dir),
+        settings.chunk_size,
+        settings.chunk_overlap,
+    )

@@ -12,14 +12,19 @@ def generate_answer(question: str, context_chunks: list[dict]) -> str:
         return "I don't know based on the available documents."
 
     context = "\n\n".join(
-        f"Source: {chunk['source']}\n{chunk['content']}" for chunk in context_chunks
+        f"Source: [{chunk['source']}, p. {chunk['page']}]\n"
+        f"Section: {chunk['section'] or 'unknown'}\n"
+        f"{chunk['content']}"
+        for chunk in context_chunks
     )
 
-    prompt = f"""You are Acme's internal documentation assistant.
+    prompt = f"""You are an assistant answering questions about football regulations
+(IFAB Laws of the Game, FIFA regulations).
 Answer the question using only the context below.
 If the context does not contain enough information, say you don't know.
 Do not invent facts.
-Cite your sources using their filenames, such as [deployment.md].
+Cite your sources as they appear in the context, such as
+[ifab-laws-of-the-game, p. 111].
 
 Context:
 {context}
