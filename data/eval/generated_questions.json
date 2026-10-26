@@ -1,0 +1,898 @@
+[
+  {
+    "question": "Si un gardien tire un coup de pied de but et que le ballon entre directement dans son propre but, le but est-il accordé ?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 16 – The Goal Kick"
+      }
+    ],
+    "expected_answer": "Non. Un but ne peut être marqué directement sur coup de pied de but que contre l'équipe adverse ; si le ballon entre directement dans le but du tireur, un corner est accordé aux adversaires.",
+    "evidence": "if the ball directly enters the kicker’s goal, a corner kick is awarded to the opponents"
+  },
+  {
+    "question": "Can a party in FIFA disciplinary proceedings get access to the recording of a hearing?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "53. CONVOCATION, RIGHTS OF THE PARTIES, HEARINGS, DECISIONS, COMMUNICATIONS AND CONFIDENTIALITY"
+      }
+    ],
+    "expected_answer": "As a rule, parties are not given access to hearing recordings, but if a party claims that procedural rules in its favour were breached during the hearing, the chairperson of the judicial body or their nominee may allow access. Recordings are destroyed after five years.",
+    "evidence": "Parties are not given access to recordings of hearings; however, if a party claims that procedural rules in its favour have been breached during a hearing"
+  },
+  {
+    "question": "What is the minimum suspension under the FIFA Disciplinary Code for serious foul play?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "14. MISCONDUCT OF PLAYERS AND OFFICIALS"
+      }
+    ],
+    "expected_answer": "At least two matches.",
+    "evidence": "e) at least two matches for serious foul play;"
+  },
+  {
+    "question": "What does the away goals rule mean?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Glossary"
+      }
+    ],
+    "expected_answer": "It is a method of deciding a match or tie when both teams have scored the same number of goals: goals scored away from home count double.",
+    "evidence": "goals scored away from home count double"
+  },
+  {
+    "question": "What can FIFA's Players' Status Chamber do if an association repeatedly violates the rules on releasing a club's player?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "annexe 01 Release of players to association teams > 1. Principles for men’s football"
+      }
+    ],
+    "expected_answer": "At the club's request, it may issue a fine, further reduce the period of release, or ban the association from calling up the player(s) for subsequent representative-team activities.",
+    "evidence": "ban the association from calling up the player(s) for subsequent representative-team activities"
+  },
+  {
+    "question": "Which clubs receive a solidarity contribution when a professional is transferred before the end of his contract?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "08. Training compensation and solidarity mechanism > 21. Solidarity mechanism"
+      }
+    ],
+    "expected_answer": "Any club that contributed to the player's education and training receives a proportion of the compensation paid to his former club.",
+    "evidence": "any club that has contributed to his education and training shall receive a proportion of the compensation paid to his former club"
+  },
+  {
+    "question": "Can a third party own part of a player's future transfer fee under FIFA rules?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "05. Third-party influence and ownership of players’ economic rights"
+      }
+    ],
+    "expected_answer": "No. Clubs and players may not enter into agreements entitling a third party to participate, fully or partly, in compensation payable for a player's future transfer; this ban came into force on 1 May 2015.",
+    "evidence": "The interdiction as per paragraph 1 comes into force on 1 May 2015."
+  },
+  {
+    "question": "Up to what fine can the chairperson of the FIFA Appeal Committee rule alone on an appeal?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "64. JURISDICTION OF THE CHAIRPERSON RULING ALONE"
+      }
+    ],
+    "expected_answer": "The chairperson can rule alone where the sanction imposed by the Disciplinary Committee is a fine of up to CHF 500,000 or a suspension of up to five matches or 12 months.",
+    "evidence": "fine\nof up to CHF 500,000"
+  },
+  {
+    "question": "How is a player's position at a restart determined under the 2026/27 Laws of the Game?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law changes 2026/27 > 2. Offences and sanctions"
+      },
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Glossary"
+      }
+    ],
+    "expected_answer": "By the position of their feet or any part of their body touching the ground (except as outlined in Law 11 – Offside); if airborne, by the projected position of their feet if they were touching the ground.",
+    "evidence": "if the player is airborne, their position is determined by the projected position of their feet if they were touching the ground"
+  },
+  {
+    "question": "How does FIFA communicate with parties during disciplinary proceedings?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "48. COMMUNICATION WITH THE PARTIES"
+      }
+    ],
+    "expected_answer": "Exclusively through the FIFA Legal Portal, whose communications are valid and binding and sufficient to establish time limits.",
+    "evidence": "shall be sent exclusively through the FIFA Legal Portal"
+  },
+  {
+    "question": "How many substitutes can be used in senior 'A' international friendly matches from 2026/27?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law changes 2026/27"
+      }
+    ],
+    "expected_answer": "Up to eight, or eleven if both teams agree and inform the referee in advance, with a limit of three substitution opportunities per team.",
+    "evidence": "increased to eight, or to eleven if both teams agree and inform the referee in advance"
+  },
+  {
+    "question": "How long should a drinks break last during a match?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 7 – The Duration of the Match > 3. Allowance for time lost"
+      }
+    ],
+    "expected_answer": "Drinks breaks should not exceed one minute; cooling breaks last between ninety seconds and three minutes, and the time lost is added on.",
+    "evidence": "‘drinks’ breaks (which should not exceed one minute)"
+  },
+  {
+    "question": "Who pays the costs of a witness requested by a party in FIFA disciplinary proceedings?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "42. WITNESSES"
+      }
+    ],
+    "expected_answer": "The party that requested the witness must ensure their appearance and pay all related costs and expenses.",
+    "evidence": "It is the responsibility of the parties to ensure the appearance of the witnesses requested by them and to pay all costs and expenses"
+  },
+  {
+    "question": "Is it legal for a player to shield the ball from an opponent?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 12 – Fouls and Misconduct > 2. Indirect free kick"
+      }
+    ],
+    "expected_answer": "Yes, if the ball is within playing distance and the opponent is not held off with the arms or body; the shielding player may then be fairly charged.",
+    "evidence": "A player may shield the ball by taking a position between an opponent and the ball if the ball is within playing distance"
+  },
+  {
+    "question": "Does the referee have to wait until a player has the ball before starting the five-second countdown at a throw-in or goal kick?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Notes and modifications"
+      }
+    ],
+    "expected_answer": "No. The countdown can also start if the player deliberately delays, for example by slowly retrieving the ball or taking up an incorrect position.",
+    "evidence": "The referee does not have to wait for a player to have possession of the ball to start the five-second countdown."
+  },
+  {
+    "question": "What happens to a match abandoned by the referee because of racist abuse?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "15. DISCRIMINATION AND RACIST ABUSE"
+      }
+    ],
+    "expected_answer": "Unless there are exceptional circumstances, the match is declared forfeited.",
+    "evidence": "if a match is abandoned by the referee because of discriminatory behaviour and/or racist abuse, the match shall be declared forfeited"
+  },
+  {
+    "question": "What is the sanction for a club whose supporters commit racist abuse for the first time?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "15. DISCRIMINATION AND RACIST ABUSE"
+      }
+    ],
+    "expected_answer": "Playing a match with a limited number of spectators and a fine of at least CHF 20,000, which may exceptionally be reduced to no less than CHF 1,000.",
+    "evidence": "For a first offence, playing a match with a limited number of spectators"
+  },
+  {
+    "question": "Do the parties learn the identity of an anonymous witness in FIFA proceedings?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "44. IDENTIFICATION OF ANONYMOUS PARTICIPANTS IN PROCEEDINGS"
+      }
+    ],
+    "expected_answer": "No. Anonymous persons are identified behind closed doors; the minutes are not communicated to the parties, who only receive a brief notice confirming the identification without identifying details.",
+    "evidence": "These minutes shall not be communicated to the parties."
+  },
+  {
+    "question": "How much compensation is a player owed if his club terminates his contract without just cause and he has not signed a new contract?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "04. Maintenance of contractual stability between professionals and clubs > 17. Consequences of terminating a contract without just cause"
+      }
+    ],
+    "expected_answer": "As a general rule, compensation equals the residual value of the prematurely terminated contract.",
+    "evidence": "the compensation shall be equal to the residual value of the contract that was prematurely terminated"
+  },
+  {
+    "question": "From what age must FIFA's Players' Status Chamber approve the international transfer of a minor?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "07. International transfers involving minors > 19. Protection of minors"
+      }
+    ],
+    "expected_answer": "Where a minor player is at least ten years old, the Players' Status Chamber of the Football Tribunal must approve the international transfer.",
+    "evidence": "Where a minor player is at least ten years old"
+  },
+  {
+    "question": "What colour must a player's undershirt be?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 4 – The Players’ Equipment > 3. Colours"
+      }
+    ],
+    "expected_answer": "A single colour matching the main colour of the shirt sleeve, or a pattern/colours that exactly replicate the shirt sleeve.",
+    "evidence": "a single colour which is the same colour as the main colour of the shirt sleeve"
+  },
+  {
+    "question": "Is a player always sent off for denying an obvious goal-scoring opportunity in their own penalty area?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 12 – Fouls and Misconduct > 4. Disciplinary action"
+      }
+    ],
+    "expected_answer": "No. If a penalty is awarded and the offence was an attempt to play or challenge for the ball, the player is cautioned; in other cases (holding, pulling, pushing...) the player is sent off.",
+    "evidence": "the offender is cautioned if the offence was an attempt to play the ball or a challenge for the ball"
+  },
+  {
+    "question": "What is the sanction for a player who publicly incites hatred or violence in the context of a match?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "14. MISCONDUCT OF PLAYERS AND OFFICIALS"
+      }
+    ],
+    "expected_answer": "A ban of at least six months from any football-related activity and a minimum fine of CHF 5,000 (CHF 20,000 in serious cases, e.g. via social networks).",
+    "evidence": "with a minimum fine of CHF 5,000"
+  },
+  {
+    "question": "What happens if a goalkeeper throws the ball directly into the opponents' goal?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 10 – Determining the Outcome of a Match > 1. Goal scored"
+      }
+    ],
+    "expected_answer": "The goal does not count; a goal kick is awarded.",
+    "evidence": "If the goalkeeper throws the ball directly into the opponents’ goal, a goal kick is awarded."
+  },
+  {
+    "question": "From what age does the Electronic Player Passport record a player's clubs?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "03. Registration of players > 7. Player passport"
+      },
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "6 Definitions"
+      }
+    ],
+    "expected_answer": "From the calendar year of the player's 12th birthday.",
+    "evidence": "have been registered since the calendar year of their 12th"
+  },
+  {
+    "question": "Why were the location and number of attackers added to the DOGSO considerations?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law changes 2026/27 > 4. Disciplinary action"
+      }
+    ],
+    "expected_answer": "Because they can also help determine whether an obvious goal-scoring opportunity exists.",
+    "evidence": "this can also help determine whether an obvious goal-scoring opportunity exists"
+  },
+  {
+    "question": "Can a player taking a corner kick deliberately kick the ball at an opponent to play it again?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 17 – The Corner Kick > 2. Offences and sanctions"
+      }
+    ],
+    "expected_answer": "Yes, as long as it is not done in a careless or reckless manner or with excessive force; the referee allows play to continue.",
+    "evidence": "deliberately kicks the ball at an opponent in order to play the ball again but not in a careless or reckless manner"
+  },
+  {
+    "question": "Can referees wear body cameras?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law changes 2026/27 > 5. Referee’s equipment"
+      }
+    ],
+    "expected_answer": "Yes, if the competition allows it, supplies the cameras and has full control of the footage; communication with the VAR may not be broadcast.",
+    "evidence": "Competitions may allow referees, assistant referees and fourth officials to wear/use body cameras"
+  },
+  {
+    "question": "If a player has to stay off the field for one minute after an injury and the half ends, when can they return?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Notes and modifications"
+      }
+    ],
+    "expected_answer": "They may return from the beginning of the second half.",
+    "evidence": "the player may return as from the beginning of the second half"
+  },
+  {
+    "question": "What sporting sanction applies to a player who breaches his contract during the protected period?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "04. Maintenance of contractual stability between professionals and clubs > 17. Consequences of terminating a contract without just cause"
+      }
+    ],
+    "expected_answer": "A four-month restriction on playing in official matches, extended to six months in aggravating circumstances.",
+    "evidence": "This sanction shall be a four-month restriction on playing in official matches."
+  },
+  {
+    "question": "De quelle couleur doit être une pelouse artificielle ?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 1 – The Field of Play > 1. Field surface"
+      }
+    ],
+    "expected_answer": "Elle doit être verte.",
+    "evidence": "The colour of artificial surfaces must be green."
+  },
+  {
+    "question": "Is a bicycle kick allowed?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 12 – Fouls and Misconduct > 2. Indirect free kick"
+      }
+    ],
+    "expected_answer": "Yes, a scissors or bicycle kick is permissible provided it is not dangerous to an opponent.",
+    "evidence": "A scissors or bicycle kick is permissible provided that it is not dangerous to an opponent."
+  },
+  {
+    "question": "How much notice must an association give a player before calling him up?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "annexe 01 Release of players to association teams > 3. Calling up players"
+      }
+    ],
+    "expected_answer": "At least 15 days before the first day of the international window (or before the release period for a final competition); the club must confirm the release within six days.",
+    "evidence": "The club must confirm the release of the player within the following six days."
+  },
+  {
+    "question": "Is an attacker in an offside position committing an offence if he runs towards the ball without preventing an opponent from playing it?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Practical guidelines for match officials > 4. Offside"
+      }
+    ],
+    "expected_answer": "No, it is not an offside offence if he does not prevent the opponent from playing or being able to play the ball.",
+    "evidence": "runs towards the ball but does not prevent the opponent from playing or being able to play the ball"
+  },
+  {
+    "question": "Which FIFA disciplinary measures can only be imposed on natural persons?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "6. DISCIPLINARY MEASURES"
+      }
+    ],
+    "expected_answer": "Match or period suspensions, dressing-room/bench bans, bans on football-related activity, community football service, and suspension or withdrawal of a football agent or match agent licence.",
+    "evidence": "community football service"
+  },
+  {
+    "question": "Where is an additional assistant referee positioned?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Glossary"
+      }
+    ],
+    "expected_answer": "On the goal line, to assist particularly with situations in and around the penalty area and goal/no-goal decisions.",
+    "evidence": "A match official positioned on the goal line to assist the referee particularly with situations in/around the penalty area"
+  },
+  {
+    "question": "Can a player in an offside position be penalised before touching the ball?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Practical guidelines for match officials > 4. Offside"
+      }
+    ],
+    "expected_answer": "Yes, if in the referee's opinion no other team-mate in an onside position has the opportunity to play the ball.",
+    "evidence": "may be penalised before playing or touching the ball, if, in the opinion of the referee, no other team-mate in an onside position has the opportunity to play the ball"
+  },
+  {
+    "question": "What fine does FIFA impose on a club that fails to pay a debt of up to CHF 10,000?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "76. ADOPTION AND ENFORCEMENT"
+      }
+    ],
+    "expected_answer": "A fine of CHF 1,000, with a final deadline of 30 days to comply.",
+    "evidence": "0-10,000 1,000\n30 days"
+  },
+  {
+    "question": "For which incidents can the VAR assist the referee?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law changes 2026/27 > 4. Video assistant referee (VAR)"
+      },
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law changes 2026/27 > 5. Video match officials"
+      }
+    ],
+    "expected_answer": "Only for clear and obvious errors or serious missed incidents involving goal/no goal, penalty/no penalty, direct red cards, mistaken identity, and (competition option) clearly incorrectly awarded corner kicks.",
+    "evidence": "mistaken identity when the referee cautions or sends off the wrong player of the offending team"
+  },
+  {
+    "question": "Who can impose sanctions under FIFA's administrative sanction procedure for transfer matching system infringements?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "annexe 03 International transfer of players and transfer matching system > 17. Administrative sanction procedure"
+      }
+    ],
+    "expected_answer": "The FIFA general secretariat, for infringements of a primarily technical or administrative nature.",
+    "evidence": "the FIFA general secretariat has the competence to impose sanctions within the administrative sanction procedure (ASP)"
+  },
+  {
+    "question": "How long does a party have to request a review of a final FIFA disciplinary decision after discovering new evidence?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "71. REVIEW"
+      }
+    ],
+    "expected_answer": "Ten days from discovering the reasons for review, and no later than one year after the decision became final.",
+    "evidence": "A request for review shall be made within ten days of discovering the reasons for review."
+  },
+  {
+    "question": "Un joueur qui joue très peu peut-il rompre son contrat ?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "04. Maintenance of contractual stability between professionals and clubs > 15. Terminating a contract with sporting just cause"
+      }
+    ],
+    "expected_answer": "Oui. Un professionnel établi qui a disputé moins de 10 % des matchs officiels de son club dans la saison peut rompre son contrat pour juste cause sportive, dans les 15 jours suivant le dernier match officiel de la saison.",
+    "evidence": "appeared in fewer than ten per cent of the official matches"
+  },
+  {
+    "question": "Should a referee start a lower-level match if a corner flag is missing?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Practical guidelines for match officials"
+      }
+    ],
+    "expected_answer": "Yes, unless there are safety issues, the referee should allow the game to start/continue with the teams' agreement, and must report it to the authorities.",
+    "evidence": "one or more corner flags are missing"
+  },
+  {
+    "question": "Who can cancel a transfer instruction in TMS once an ITC has been requested?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "annexe 03 International transfer of players and transfer matching system > 15. Cancellation"
+      }
+    ],
+    "expected_answer": "Only the relevant association(s), which must indicate the reason and the correct information; the counter association then accepts or disputes it.",
+    "evidence": "Once an ITC has been requested, only the relevant association(s) may request the cancellation in TMS"
+  },
+  {
+    "question": "When can a futsal player who was on loan play again for his original club?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "annexe 06 Rules for the Status and Transfer of Futsal Players > 5. International transfer of futsal players"
+      }
+    ],
+    "expected_answer": "Only once the IFTC procedure is completed and his original association has re-registered him.",
+    "evidence": "the futsal player is not eligible to play for his original futsal club"
+  },
+  {
+    "question": "Une personne sans moyens financiers peut-elle obtenir une aide juridique devant les instances disciplinaires de la FIFA ?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "46. LEGAL AID"
+      }
+    ],
+    "expected_answer": "Oui, elle peut demander une aide juridique à la FIFA en soumettant une demande motivée avec justificatifs ; le secrétariat tient une liste d'avocats bénévoles.",
+    "evidence": "who have insufficient financial means may request legal aid from FIFA"
+  },
+  {
+    "question": "What percentage of a transfer fee goes to the solidarity contribution?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "annexe 05 Solidarity mechanism > 1. Solidarity contribution"
+      }
+    ],
+    "expected_answer": "5% of any compensation (excluding training compensation) is deducted and distributed to the clubs that trained the player between the calendar years of his 12th and 23rd birthdays.",
+    "evidence": "5% of any compensation paid within the scope of this transfer"
+  },
+  {
+    "question": "Between which ages does a player's training period take place for training compensation purposes?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "annexe 04 Training compensation > 1. Objective"
+      }
+    ],
+    "expected_answer": "Between 12 and 23; training compensation is generally payable up to age 23 for training incurred up to age 21.",
+    "evidence": "A player’s training and education takes place between the ages of 12 and 23."
+  },
+  {
+    "question": "Who is sanctioned if an offence comes from the technical area and the offender cannot be identified?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 12 – Fouls and Misconduct > 4. Disciplinary action"
+      }
+    ],
+    "expected_answer": "The senior team coach present in the technical area.",
+    "evidence": "the senior team coach present in the technical area will receive the sanction"
+  },
+  {
+    "question": "What happens if a player does not return to his club on time after international duty?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "annexe 01 Release of players to association teams > 1. Principles for men’s football"
+      }
+    ],
+    "expected_answer": "At the club's request, the Players' Status Chamber may shorten his next release period by two days (international window) or five days (final competition).",
+    "evidence": "a) international window: by two days;"
+  },
+  {
+    "question": "Is an attacker in an offside position who blocks the goalkeeper's line of vision committing an offence?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Practical guidelines for match officials > 4. Offside"
+      }
+    ],
+    "expected_answer": "Yes, if he clearly obstructs the goalkeeper's line of vision he must be penalised for preventing an opponent from playing the ball.",
+    "evidence": "is clearly obstructing the goalkeeper’s line of vision. The player must be penalised"
+  },
+  {
+    "question": "What interest rate can FIFA order a debtor to pay to a creditor after a CAS decision?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "21. FAILURE TO RESPECT DECISIONS"
+      }
+    ],
+    "expected_answer": "An interest rate of 18% per year from the date of the Disciplinary Committee decision.",
+    "evidence": "an interest rate of 18% p.a."
+  },
+  {
+    "question": "Can the VAR review a wrongly awarded corner kick if the kick has already been taken quickly?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law changes 2026/27 > 2. Reviewable match-changing decisions/incidents"
+      }
+    ],
+    "expected_answer": "No. The review of a clearly incorrect corner is a competition option only if it can be done immediately; if the corner kick is taken quickly, the decision cannot be changed.",
+    "evidence": "If the corner kick is taken quickly, then the decision cannot be changed."
+  },
+  {
+    "question": "Comment doit être le poteau de corner ?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 1 – The Field of Play > 7. The corner area"
+      }
+    ],
+    "expected_answer": "Il est obligatoire, doit mesurer au moins 1,5 m de haut et ne pas avoir de sommet pointu.",
+    "evidence": "Corner flagpost is compulsory"
+  },
+  {
+    "question": "Can an assistant referee enter the field of play?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 6 – The Other Match Officials > 1. Assistant referees"
+      }
+    ],
+    "expected_answer": "Yes, to help control the 9.15 m (10 yards) distance.",
+    "evidence": "The assistant referee may enter the field of play to help control the 9.15m (10 yards) distance."
+  },
+  {
+    "question": "What is the maximum suspension a single judge of the FIFA Disciplinary Committee can impose?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "57. JURISDICTION OF THE SINGLE JUDGES OF THE DISCIPLINARY COMMITTEE"
+      }
+    ],
+    "expected_answer": "Up to five matches or up to three months, and fines of up to CHF 100,000.",
+    "evidence": "suspending a person for up to five matches or for up to three months"
+  },
+  {
+    "question": "What happens if a former association does not respond to an international futsal transfer certificate request?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "annexe 06 Rules for the Status and Transfer of Futsal Players > 5. International transfer of futsal players"
+      }
+    ],
+    "expected_answer": "After 30 days, the new association must provisionally register the futsal player; the registration becomes permanent one year after the request.",
+    "evidence": "If the former association fails to respond to the IFTC request within 30 days"
+  },
+  {
+    "question": "How long can someone serve as a FIFA Disciplinary and Ethics Prosecutor?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "36. DISCIPLINARY AND ETHICS PROSECUTORS"
+      }
+    ],
+    "expected_answer": "Their term is limited to four years.",
+    "evidence": "The duration of the term of a Disciplinary and Ethics Prosecutor shall be limited to four years."
+  },
+  {
+    "question": "À quelle distance du ballon doivent se trouver les adversaires lors du coup d'envoi ?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 8 – The Start and Restart of Play > 1. Kick-off Procedure"
+      }
+    ],
+    "expected_answer": "À au moins 9,15 m (10 yards) jusqu'à ce que le ballon soit en jeu.",
+    "evidence": "the opponents of the team taking the kick-off must be at least 9.15 m (10 yds) from the ball until it is in play"
+  },
+  {
+    "question": "How is the compensation of a coach calculated if his contract is terminated without just cause and he signs a new contract?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "annexe 02 Rules for the employment of coaches > 6. Consequences of terminating a contract without just cause"
+      }
+    ],
+    "expected_answer": "The value of the new contract for the remaining period is deducted from the residual value of the old contract (Mitigated Compensation), plus three monthly salaries if the termination was due to overdue payables (up to six in egregious circumstances).",
+    "evidence": "the coach shall be entitled to an amount corresponding to three monthly salaries"
+  },
+  {
+    "question": "What happens if a penalty kick rebounds off the crossbar and is then touched by an outside agent?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 14 – The Penalty Kick > 2. Offences and sanctions"
+      }
+    ],
+    "expected_answer": "The referee stops play and restarts with a dropped ball where it touched the outside agent.",
+    "evidence": "play is restarted with a dropped ball at the position where it touched the outside agent"
+  },
+  {
+    "question": "What happens if an attacker stands less than 1 metre from a defensive wall when a free kick is taken?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 13 – Free Kicks > 3. Offences and sanctions"
+      }
+    ],
+    "expected_answer": "An indirect free kick is awarded to the defending team (when the wall has three or more players).",
+    "evidence": "an attacking team player is less than 1 m (1 yd) from a ‘wall’ formed by three or more defending team players, an indirect free kick is awarded"
+  },
+  {
+    "question": "When must a new club pay the solidarity contribution to training clubs?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "annexe 05 Solidarity mechanism > 2. Payment procedure"
+      }
+    ],
+    "expected_answer": "For cases not covered by the Clearing House Regulations, no later than 30 days after the player's registration (or 30 days after contingent payments).",
+    "evidence": "no later than 30 days after the player’s registration"
+  },
+  {
+    "question": "Is a player in an offside position penalised if the ball rebounds to him off the goalpost?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 11 – Offside > 2. Offside offence"
+      }
+    ],
+    "expected_answer": "Yes, gaining an advantage by playing a ball that rebounded or was deflected off the goalpost, crossbar, match official or an opponent is an offside offence.",
+    "evidence": "rebounded or been deflected off the goalpost, crossbar, match official or an opponent"
+  },
+  {
+    "question": "How long can the first registration period (transfer window) last?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "03. Registration of players > 6. Registration periods"
+      }
+    ],
+    "expected_answer": "Between eight and 12 weeks; the second period lasts four to eight weeks, and both together may not exceed 16 weeks.",
+    "evidence": "This first registration period shall not be shorter than eight weeks or longer than 12 weeks."
+  },
+  {
+    "question": "What is a video assistant referee?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law changes 2026/27 > 5. Video match officials"
+      },
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 6 – The Other Match Officials > 5. Video match officials"
+      }
+    ],
+    "expected_answer": "A match official who may assist the referee using replay footage only for a clear and obvious error or serious missed incident (goal, penalty, direct red card, mistaken identity).",
+    "evidence": "A video assistant referee (VAR) is a match official who may assist the referee to make a decision using replay footage"
+  },
+  {
+    "question": "By when must a party challenge a FIFA judicial body member whose impartiality is in doubt?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "32. INDEPENDENCE AND IMPARTIALITY"
+      }
+    ],
+    "expected_answer": "At the latest two days before the date on which the judicial body is to decide the matter.",
+    "evidence": "at the latest two days prior to the relevant date on which the judicial body is called to decide on a matter"
+  },
+  {
+    "question": "Can a new club be held responsible for the debts of a club it replaced?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "21. FAILURE TO RESPECT DECISIONS"
+      }
+    ],
+    "expected_answer": "Yes. A sporting successor of a non-compliant party is also considered non-compliant, based on criteria such as headquarters, name, colours, players, ownership and competition.",
+    "evidence": "The sporting successor of a non-compliant party shall also be considered a non-compliant party"
+  },
+  {
+    "question": "How does the VAR talk to the referee during a match?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "VAR protocol > 3. Practicalities"
+      }
+    ],
+    "expected_answer": "The VAR can hear everything the match officials say, but can only speak to the referee by pushing a button.",
+    "evidence": "the VAR can only speak to the referee by pushing a button"
+  },
+  {
+    "question": "Can a pregnant player keep playing for her club?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "06. Special provisions relating to female players"
+      }
+    ],
+    "expected_answer": "Yes. She has the right to continue playing and training; the club must respect her decision, plan her safe participation, and pay her full remuneration until maternity leave.",
+    "evidence": "The player has the right to continue providing sporting services to her club"
+  },
+  {
+    "question": "What should an assistant referee do when a goal has clearly been scored?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Practical guidelines for match officials > 2. Positioning and teamwork Consultation"
+      }
+    ],
+    "expected_answer": "Make eye contact with the referee and then move quickly 25–30 metres along the touchline towards the halfway line without raising the flag.",
+    "evidence": "move quickly 25–30 metres along the touchline towards the halfway line without raising the flag"
+  },
+  {
+    "question": "Can a coach terminate his contract if the club pressures him to leave?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "annexe 02 Rules for the employment of coaches > 4. Terminating a contract with just cause"
+      }
+    ],
+    "expected_answer": "Yes. Abusive conduct aimed at forcing the counterparty to terminate or change the contract gives the counterparty just cause to terminate, without paying compensation.",
+    "evidence": "Any abusive conduct of a party aimed at forcing the counterparty to terminate or change the terms of the contract"
+  },
+  {
+    "question": "Dans quelles langues se déroulent les procédures disciplinaires de la FIFA ?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "47. LANGUAGE USED IN PROCEEDINGS"
+      }
+    ],
+    "expected_answer": "En anglais, en français et en espagnol.",
+    "evidence": "The languages used in proceedings are English, French and Spanish."
+  },
+  {
+    "question": "What happens to a player who makes unauthorised marks on the pitch?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 1 – The Field of Play > 2. Field markings"
+      }
+    ],
+    "expected_answer": "The player is cautioned for unsporting behaviour, when the ball next goes out of play if noticed during the match.",
+    "evidence": "A player who makes unauthorised marks on the field of play must be cautioned for unsporting behaviour."
+  },
+  {
+    "question": "Que se passe-t-il si le ballon touche le sol avant d'entrer sur le terrain lors d'une rentrée de touche ?",
+    "expected_passages": [
+      {
+        "source": "ifab-laws-of-the-game",
+        "section": "Law 15 – The Throw-in > 1. Procedure"
+      }
+    ],
+    "expected_answer": "La rentrée de touche est retirée par la même équipe au même endroit.",
+    "evidence": "If the ball touches the ground before entering, the throw-in is retaken by the same team from the same position."
+  },
+  {
+    "question": "Do FIFA's futsal transfer rules apply to women and amateurs?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "annexe 06 Rules for the Status and Transfer of Futsal Players > 1. Scope"
+      }
+    ],
+    "expected_answer": "Yes, they apply equally to men, women, amateurs and professionals unless expressly provided otherwise.",
+    "evidence": "These rules shall apply equally to men, women, amateurs and professionals"
+  },
+  {
+    "question": "What fine does a club face if its supporters fly a drone over the stadium?",
+    "expected_passages": [
+      {
+        "source": "fifa-disciplinary-code",
+        "section": "76. ADOPTION AND ENFORCEMENT"
+      }
+    ],
+    "expected_answer": "CHF 15,000 if there is no match interruption or impact, CHF 25,000 if the match is interrupted or delayed.",
+    "evidence": "CHF 15,000 (if no match interruption/no impact"
+  },
+  {
+    "question": "With how many futsal clubs can a player be registered in one season?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "annexe 06 Rules for the Status and Transfer of Futsal Players > 3. Registration of futsal players"
+      }
+    ],
+    "expected_answer": "A maximum of three, but he can only play official matches for two of them (with an exception for overlapping seasons).",
+    "evidence": "Futsal players may be registered with a maximum of three futsal clubs during one season."
+  },
+  {
+    "question": "How are training costs calculated for a player's 12th to 15th birthday years?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "annexe 04 Training compensation > 5. Calculation of training compensation"
+      }
+    ],
+    "expected_answer": "They are based on the training and education costs of category 4 clubs, to avoid unreasonably high compensation for very young players.",
+    "evidence": "shall be based on the training and education costs of category 4 clubs"
+  },
+  {
+    "question": "Does a player's domestic suspension follow him after an international transfer?",
+    "expected_passages": [
+      {
+        "source": "fifa-status-transfer-players",
+        "section": "03. Registration of players > 12. Enforcement of disciplinary sanctions"
+      }
+    ],
+    "expected_answer": "Sanctions of up to four matches or three months are enforced by the new association; longer ones only if the FIFA Disciplinary Committee has given them worldwide effect.",
+    "evidence": "Any disciplinary sanction of up to four matches or up to three months"
+  }
+]
