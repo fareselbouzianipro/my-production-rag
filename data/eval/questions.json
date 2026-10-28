@@ -30,14 +30,14 @@
     "expected_answer": "International transfers are only permitted if the player is over the age of 18, with five listed exceptions."
   },
   {
-    "question": "Où doit se placer le gardien de but lors d'un penalty ?",
+    "question": "Where must the goalkeeper stand during a penalty kick?",
     "expected_passages": [
       {
         "source": "ifab-laws-of-the-game",
         "section": "Law 14 – The Penalty Kick > 1. Procedure"
       }
     ],
-    "expected_answer": "Le gardien doit rester sur sa ligne de but, face au tireur, entre les poteaux, jusqu'à ce que le ballon soit frappé."
+    "expected_answer": "The goalkeeper must remain on the goal line, facing the kicker, between the goalposts, until the ball is kicked."
   },
   {
     "question": "Which country won the 2022 FIFA World Cup?",
@@ -45,14 +45,14 @@
     "expected_answer": "The documents do not contain this information."
   },
   {
-    "question": "Si un gardien tire un coup de pied de but et que le ballon entre directement dans son propre but, le but est-il accordé ?",
+    "question": "If a goalkeeper takes a goal kick and the ball goes directly into their own goal, does the goal count?",
     "expected_passages": [
       {
         "source": "ifab-laws-of-the-game",
         "section": "Law 16 – The Goal Kick"
       }
     ],
-    "expected_answer": "Non. Un but ne peut être marqué directement sur coup de pied de but que contre l'équipe adverse ; si le ballon entre directement dans le but du tireur, un corner est accordé aux adversaires.",
+    "expected_answer": "No. A goal may be scored directly from a goal kick only against the opposing team; if the ball directly enters the kicker's goal, a corner kick is awarded to the opponents.",
     "evidence": "if the ball directly enters the kicker’s goal, a corner kick is awarded to the opponents"
   },
   {
@@ -383,14 +383,14 @@
     "evidence": "This sanction shall be a four-month restriction on playing in official matches."
   },
   {
-    "question": "De quelle couleur doit être une pelouse artificielle ?",
+    "question": "What colour must an artificial pitch be?",
     "expected_passages": [
       {
         "source": "ifab-laws-of-the-game",
         "section": "Law 1 – The Field of Play > 1. Field surface"
       }
     ],
-    "expected_answer": "Elle doit être verte.",
+    "expected_answer": "Artificial surfaces must be green.",
     "evidence": "The colour of artificial surfaces must be green."
   },
   {
@@ -508,14 +508,14 @@
     "evidence": "A request for review shall be made within ten days of discovering the reasons for review."
   },
   {
-    "question": "Un joueur qui joue très peu peut-il rompre son contrat ?",
+    "question": "Can a player who rarely plays terminate his contract?",
     "expected_passages": [
       {
         "source": "fifa-status-transfer-players",
         "section": "04. Maintenance of contractual stability between professionals and clubs > 15. Terminating a contract with sporting just cause"
       }
     ],
-    "expected_answer": "Oui. Un professionnel établi qui a disputé moins de 10 % des matchs officiels de son club dans la saison peut rompre son contrat pour juste cause sportive, dans les 15 jours suivant le dernier match officiel de la saison.",
+    "expected_answer": "Yes. An established professional who appeared in fewer than ten per cent of his club's official matches in the season may terminate his contract for sporting just cause, within 15 days after the club's last official match of the season.",
     "evidence": "appeared in fewer than ten per cent of the official matches"
   },
   {
@@ -552,14 +552,14 @@
     "evidence": "the futsal player is not eligible to play for his original futsal club"
   },
   {
-    "question": "Une personne sans moyens financiers peut-elle obtenir une aide juridique devant les instances disciplinaires de la FIFA ?",
+    "question": "Can someone without financial means get legal aid in FIFA disciplinary proceedings?",
     "expected_passages": [
       {
         "source": "fifa-disciplinary-code",
         "section": "46. LEGAL AID"
       }
     ],
-    "expected_answer": "Oui, elle peut demander une aide juridique à la FIFA en soumettant une demande motivée avec justificatifs ; le secrétariat tient une liste d'avocats bénévoles.",
+    "expected_answer": "Yes. Individuals with insufficient financial means may request legal aid from FIFA by submitting a reasoned request with supporting documents; the secretariat keeps a list of pro bono counsel.",
     "evidence": "who have insufficient financial means may request legal aid from FIFA"
   },
   {
@@ -640,14 +640,14 @@
     "evidence": "If the corner kick is taken quickly, then the decision cannot be changed."
   },
   {
-    "question": "Comment doit être le poteau de corner ?",
+    "question": "What are the requirements for a corner flagpost?",
     "expected_passages": [
       {
         "source": "ifab-laws-of-the-game",
         "section": "Law 1 – The Field of Play > 7. The corner area"
       }
     ],
-    "expected_answer": "Il est obligatoire, doit mesurer au moins 1,5 m de haut et ne pas avoir de sommet pointu.",
+    "expected_answer": "A corner flagpost is compulsory; it must be at least 1.5 m (5 ft) high, with a non-pointed top.",
     "evidence": "Corner flagpost is compulsory"
   },
   {
@@ -695,14 +695,14 @@
     "evidence": "The duration of the term of a Disciplinary and Ethics Prosecutor shall be limited to four years."
   },
   {
-    "question": "À quelle distance du ballon doivent se trouver les adversaires lors du coup d'envoi ?",
+    "question": "How far from the ball must opponents be at a kick-off?",
     "expected_passages": [
       {
         "source": "ifab-laws-of-the-game",
         "section": "Law 8 – The Start and Restart of Play > 1. Kick-off Procedure"
       }
     ],
-    "expected_answer": "À au moins 9,15 m (10 yards) jusqu'à ce que le ballon soit en jeu.",
+    "expected_answer": "At least 9.15 m (10 yds) from the ball until it is in play.",
     "evidence": "the opponents of the team taking the kick-off must be at least 9.15 m (10 yds) from the ball until it is in play"
   },
   {
@@ -853,14 +853,14 @@
     "evidence": "Any abusive conduct of a party aimed at forcing the counterparty to terminate or change the terms of the contract"
   },
   {
-    "question": "Dans quelles langues se déroulent les procédures disciplinaires de la FIFA ?",
+    "question": "In which languages are FIFA disciplinary proceedings conducted?",
     "expected_passages": [
       {
         "source": "fifa-disciplinary-code",
         "section": "47. LANGUAGE USED IN PROCEEDINGS"
       }
     ],
-    "expected_answer": "En anglais, en français et en espagnol.",
+    "expected_answer": "English, French and Spanish.",
     "evidence": "The languages used in proceedings are English, French and Spanish."
   },
   {
@@ -875,14 +875,14 @@
     "evidence": "A player who makes unauthorised marks on the field of play must be cautioned for unsporting behaviour."
   },
   {
-    "question": "Que se passe-t-il si le ballon touche le sol avant d'entrer sur le terrain lors d'une rentrée de touche ?",
+    "question": "What happens if the ball touches the ground before entering the field at a throw-in?",
     "expected_passages": [
       {
         "source": "ifab-laws-of-the-game",
         "section": "Law 15 – The Throw-in > 1. Procedure"
       }
     ],
-    "expected_answer": "La rentrée de touche est retirée par la même équipe au même endroit.",
+    "expected_answer": "The throw-in is retaken by the same team from the same position.",
     "evidence": "If the ball touches the ground before entering, the throw-in is retaken by the same team from the same position."
   },
   {

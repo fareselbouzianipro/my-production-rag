@@ -21,9 +21,11 @@ made, backed by numbers.
 - [x] Grounded generation with a local LLM (Ollama)
 - [x] First retrieval metrics (recall@k, MRR)
 - [x] `src/` layout, centralized configuration, test suite
-- [ ] Real public corpus (hundreds to thousands of documents)
-- [ ] Evaluation set of 50–100 questions with expected source documents
-- [ ] Baseline scores recorded
+- [x] Real public corpus: IFAB Laws of the Game + 2 FIFA regulations (PDF, ~1,300 chunks), reproducible download with pinned checksums
+- [x] PDF extraction: page furniture removed, passages labelled with chapter and section
+- [x] Evaluation set of 85 questions with expected passages (source + section)
+- [x] Baseline scores recorded
+- [ ] Grow the corpus (more FIFA/UEFA regulations)
 
 ## Phase 2 — Evaluation harness
 
@@ -37,7 +39,8 @@ made, backed by numbers.
 
 Each item is an experiment, compared against the baseline.
 
-- [ ] Chunking strategies: fixed size vs. Markdown sections vs. semantic
+- [ ] Filter or merge very short chunks
+- [ ] Chunking strategies: fixed size vs. sections vs. semantic
 - [ ] Hybrid retrieval: BM25 + dense
 - [ ] Reranking
 - [ ] Query rewriting
@@ -55,6 +58,10 @@ Each item is an experiment, compared against the baseline.
 
 Experiment results will be tracked here as they are produced.
 
-| Experiment | recall@5 | MRR | Faithfulness | Notes |
+The system targets English questions. Retrieval scores are computed on the 84
+answerable questions of `data/eval/questions.json` (a result counts as relevant
+when its source and section match an expected passage).
+
+| Experiment | Recall@3 | MRR@3 | Faithfulness | Notes |
 |---|---|---|---|---|
-| Baseline (dense, fixed chunks) | – | – | – | Pending real corpus |
+| Baseline | 0.792 | 0.718 | – | Dense retrieval, `bge-small-en-v1.5`, 500-char chunks (50 overlap) |
