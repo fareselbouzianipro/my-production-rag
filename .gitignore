@@ -14,3 +14,6 @@ wheels/
 
 # Downloaded corpus (see data/sources.toml)
 data/corpus/
+
+# Personal Claude Code instructions
+CLAUDE.local.md
