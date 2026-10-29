@@ -33,7 +33,7 @@ Check that the `config` block of the new run file in `experiments/` reflects the
 
 Read both run files and report:
 - **Aggregate**: each metric in `metrics`, baseline vs experiment, with the delta.
-- **Per question**: match questions by text and list those whose `recall` or `mrr` changed — wins first, then losses — with the expected section and what was retrieved instead. Skip unanswerable questions (`recall` is `null`).
+- **Per question**: match questions by text and list those whose `metrics` (`recall@3`, `precision@3`, `mrr@3`) changed — wins first, then losses — with the expected section and what was retrieved instead. Skip unanswerable questions (empty `expected`). Runs saved before 2026-10-29 store `recall`/`mrr` at k=3 only; compare on the keys both runs share.
 - **Reading the numbers**: with 84 answerable questions, one question is ~1.2 points of recall, so a gain of 1–2 questions is likely noise unless the per-question analysis shows a consistent pattern. Point out any pattern you see (e.g. "all losses are in the Glossary"), and whether the result supports the user's hypothesis.
 
 Give an opinion if useful, but end by asking the user whether they keep or reject the change.

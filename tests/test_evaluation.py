@@ -1,6 +1,10 @@
 import pytest
 
-from production_rag.evaluation import recall_at_k, reciprocal_rank_at_k
+from production_rag.evaluation import (
+    precision_at_k,
+    recall_at_k,
+    reciprocal_rank_at_k,
+)
 
 OFFSIDE = {"source": "ifab-laws-of-the-game", "section": "Law 11 – Offside"}
 THROW_IN = {"source": "ifab-laws-of-the-game", "section": "Law 15 – The Throw-in"}
@@ -28,11 +32,24 @@ def test_reciprocal_rank_uses_first_relevant_result():
     assert reciprocal_rank_at_k(results, [MANIPULATION], k=3) == pytest.approx(1 / 3)
 
 
+def test_precision_at_k_counts_noise_in_retrieved_chunks():
+    # Two chunks of the expected section, one unrelated chunk.
+    results = [OFFSIDE, MANIPULATION, OFFSIDE]
+
+    assert precision_at_k(results, [OFFSIDE], k=1) == 1.0
+    assert precision_at_k(results, [OFFSIDE], k=3) == pytest.approx(2 / 3)
+
+
+def test_precision_at_k_counts_missing_results_as_not_relevant():
+    assert precision_at_k([OFFSIDE], [OFFSIDE], k=3) == pytest.approx(1 / 3)
+
+
 def test_unanswerable_question_is_excluded_from_metrics():
     results = [OFFSIDE]
 
     assert recall_at_k(results, [], k=3) is None
     assert reciprocal_rank_at_k(results, [], k=3) is None
+    assert precision_at_k(results, [], k=3) is None
 
 
 def test_k_must_be_positive():

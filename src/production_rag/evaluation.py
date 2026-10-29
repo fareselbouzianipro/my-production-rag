@@ -49,3 +49,26 @@ def reciprocal_rank_at_k(
             return 1.0 / rank
 
     return 0.0
+
+
+def precision_at_k(
+    results: Sequence[dict[str, Any]],
+    expected_passages: Sequence[dict[str, Any]],
+    k: int = 3,
+) -> float | None:
+    """Measure the fraction of top-k results that come from an expected passage.
+
+    The rest is noise sent to the LLM. Missing results (fewer than k) count
+    as not relevant.
+    """
+    if k <= 0:
+        raise ValueError("k must be positive")
+
+    expected = {passage_key(passage) for passage in expected_passages}
+
+    if not expected:
+        return None
+
+    relevant = sum(1 for result in results[:k] if passage_key(result) in expected)
+
+    return relevant / k

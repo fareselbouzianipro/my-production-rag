@@ -23,7 +23,7 @@ uv sync                                   # install deps
 docker compose up -d                      # start Qdrant on :6333
 uv run python scripts/download_corpus.py  # fetch PDFs from data/sources.toml into data/corpus/ (sha256-checked, gitignored)
 uv run python scripts/index_documents.py  # extract → chunk → embed → (re)create Qdrant collection
-uv run python scripts/evaluate_retrieval.py --name <experiment>  # recall@3 / MRR@3, saves run to experiments/
+uv run python scripts/evaluate_retrieval.py --name <experiment>  # recall / precision / MRR at k=1,3,5, saves run to experiments/
 uv run python scripts/ask.py              # end-to-end RAG answer (needs Ollama running with LLM_MODEL)
 
 uv run pytest                             # all tests

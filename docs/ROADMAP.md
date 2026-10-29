@@ -30,7 +30,7 @@ made, backed by numbers.
 ## Phase 2 — Evaluation harness
 
 - [ ] Script that runs a pipeline configuration and outputs all metrics
-- [ ] Retrieval metrics: recall@k, MRR, nDCG
+- [x] Retrieval metrics: recall@k, precision@k, MRR@k for k = 1, 3, 5 (see [Metrics](#metrics))
 - [ ] Generation metrics: faithfulness, answer relevance, citation rate (LLM-as-judge)
 - [ ] Experiment runs saved and comparable over time
 - [ ] Small UI to browse and compare experiments
@@ -54,6 +54,23 @@ Each item is an experiment, compared against the baseline.
 - [ ] Observability: latency, cost, traces
 - [ ] Public demo
 
+## Metrics
+
+Retrieval is evaluated with deterministic metrics computed against the expected
+passages of each question (no LLM judge, so they are free and run on every change).
+Each metric answers one question:
+
+| Metric | Question it answers | Definition |
+|---|---|---|
+| **Recall@k** | Did we retrieve everything we need? | Share of the expected passages found in the top k results |
+| **Precision@k** | How much of what we retrieve is noise? | Share of the top k results that come from an expected passage — the rest is noise sent to the LLM |
+| **MRR@k** | Is the right passage ranked high? | 1 / rank of the first relevant result in the top k (0 if none) |
+
+A result is relevant when its `(source, section)` matches an expected passage, so
+the labels stay valid when the chunking changes. Unanswerable questions are
+excluded. nDCG is not used: almost every question has a single relevant passage,
+where nDCG carries the same information as MRR.
+
 ## Results
 
 Experiment results will be tracked here as they are produced.
@@ -62,6 +79,6 @@ The system targets English questions. Retrieval scores are computed on the 84
 answerable questions of `data/eval/questions.json` (a result counts as relevant
 when its source and section match an expected passage).
 
-| Experiment | Recall@3 | MRR@3 | Faithfulness | Notes |
-|---|---|---|---|---|
-| Baseline | 0.792 | 0.718 | – | Dense retrieval, `bge-small-en-v1.5`, 500-char chunks (50 overlap) |
+| Experiment | Recall@1 | Recall@3 | Recall@5 | Precision@3 | MRR@3 | Notes |
+|---|---|---|---|---|---|---|
+| Baseline | 0.631 | 0.792 | 0.827 | 0.452 | 0.718 | Dense retrieval, `bge-small-en-v1.5`, 500-char chunks (50 overlap) |
